@@ -31,19 +31,19 @@ def shortest_path(start, end):
     return mov
 
 def reversal_name(s):
-    r=""
-    if(s=="F"):
-        r="Fi"
-    elif(s=="Fi"):
-        r="F"
-    elif(s=="Li"):
-        r="L"
-    elif(s=="L"):
-        r="Li"
-    elif(s=="U"):
-        r="Ui"
+    r = ""
+    if s == "F" :
+        r = "Fi"
+    elif s == "Fi" :
+        r = "F"
+    elif s == "Li":
+        r = "L"
+    elif s == "L" :
+        r = "Li"
+    elif s == "U":
+        r = "Ui"
     else:
-        r="U"
+        r = "U"
     return r
 
 def shortest_path_optmized(start, end):
@@ -55,12 +55,12 @@ def shortest_path_optmized(start, end):
     Each move can be applied using rubik.perm_apply
     """
     q_front = Queue.Queue()
-    q_front.put([start,[]])
-    visited_front = {start:[]}
+    q_front.put([start, []])
+    visited_front = {start : []}
 
     q_back = Queue.Queue()
-    q_back.put([end,[]])
-    visited_back  = {end:[]}
+    q_back.put([end, []])
+    visited_back  = {end: [] }
 
     if start == end : 
         print([])
@@ -82,7 +82,7 @@ def shortest_path_optmized(start, end):
 
                 if x[0] not in visited_front:
                     visited_front[x[0]] = x[1][:]
-                    if(len(x[1])<=7):
+                    if len(x[1]) <= 7 :
                         q_front.put(x)
 
         if not q_back.empty():
@@ -98,10 +98,8 @@ def shortest_path_optmized(start, end):
 
                 if x[0] not in visited_back:
                     visited_back[x[0]] = x[1][:]
-                    if(len(x[1])<=7):
+                    if len(x[1]) <= 7 :
                         q_back.put(x)
-
-        
     print("None")
 
 def test(x):
@@ -119,11 +117,12 @@ def test(x):
         current = rubik.perm_apply(t[move], current)
     if(current!=end):
         print(start,end,"Optimised failed")
+        exit()
     else:
         print("Optimised ok")
 
     #bruteforce will take large time otherwise
-    if(len(ans1)>7):
+    if(len(ans1)>6):
         return
     ans2= shortest_path(start,end)
     current = start
@@ -131,12 +130,13 @@ def test(x):
         current = rubik.perm_apply(t[move], current)
     if(current!=end):
         print(start,end,"Bruteforce failed")
+        exit()
     else:
         print("Bruteforce ok")
 
 def test_suite():
     for i in range(int(input("Enter number of testcase "))):
-        test(random.randrange(1,12))#larger random number means high chances of longer path
+        test(random.randrange(7,12))#larger random number means high chances of longer path
 
 
 test_suite()
