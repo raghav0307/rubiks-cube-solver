@@ -19,7 +19,7 @@ by listing the faces it contains, starting with
 F or B, in clockwise order (looking in from outside).
    0th cubie = FLU
    1st cubie = FUR
-   2nd cubie = FDL
+   2nd cubie = FDLx 
    3rd cubie = FRD
    4th cubie = BUL
    5th cubie = BRU
