@@ -1,5 +1,6 @@
 import rubik
 import Queue
+import random
 def shortest_path(start, end):
     """
     For Question 1, using BFS, finds the shortest path from start_position to
@@ -30,18 +31,20 @@ def shortest_path(start, end):
     print(mov)
 
 def reversal_name(s):
+    r=""
     if(s=="F"):
-        return "Fi"
+        r="Fi"
     elif(s=="Fi"):
-        return "F"
+        r="F"
     elif(s=="Li"):
-        return "L"
+        r="L"
     elif(s=="L"):
-        return "Li"
+        r="Li"
     elif(s=="U"):
-        return "Ui"
+        r="Ui"
     else:
-        return "U"
+        r="U"
+    return r
 
 def shortest_path_optmized(start, end):
     """
@@ -61,7 +64,7 @@ def shortest_path_optmized(start, end):
 
     if start == end : 
         print([])
-        return 
+        return 1
 
     while not q_back.empty() or not q_front.empty():
 
@@ -74,8 +77,8 @@ def shortest_path_optmized(start, end):
                 x = (rubik.perm_apply(twist, cur_front[0]), cur_front[1] + [rubik.quarter_twists_names[twist]])
                 
                 if x[0] in visited_back:
-                    print(x[1] + visited_back[x[0]][::-1])
-                    return 
+                    print(x[1] , visited_back[x[0]][::-1])
+                    return 1
 
                 if x[0] not in visited_front:
                     visited_front[x[0]] = x[1][:]
@@ -90,8 +93,8 @@ def shortest_path_optmized(start, end):
                 x = (rubik.perm_apply(twist, cur_back[0]), cur_back[1] + [reversal_name(rubik.quarter_twists_names[twist])])
 
                 if x[0] in visited_front:
-                    print(visited_front[x[0]] + x[1][::-1])
-                    return 
+                    print(visited_front[x[0]] , x[1][::-1])
+                    return 1
 
                 if x[0] not in visited_back:
                     visited_back[x[0]] = x[1][:]
@@ -100,10 +103,11 @@ def shortest_path_optmized(start, end):
     print("None")
 
 
-
-
-#length 4
-start = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
-end= (18, 19, 20, 13, 14, 12, 7, 8, 6, 0, 1, 2, 9, 10, 11, 15, 16, 17, 4, 5, 3, 21, 22, 23)
-shortest_path_optmized(start, end)
+l = [rubik.L,rubik.F,rubik.Fi,rubik.Li,rubik.Ui]
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end  = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+for i in range(3):
+    end = rubik.perm_apply(end,l[random.randrange(0,5)])
+shortest_path_optmized(start,end)
 shortest_path(start,end)
+
