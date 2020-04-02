@@ -1,6 +1,7 @@
 import rubik
 import Queue
 import random
+import time
 def shortest_path(start, end):
     """
     For Question 1, using BFS, finds the shortest path from start_position to
@@ -108,9 +109,16 @@ def test(x):
     end  = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
     
     for i in range(x):
-        end = rubik.perm_apply(end,l[random.randrange(0,5)])
+        end = rubik.perm_apply(end,l[random.randrange(0,len(l))])
     
+    print("\nRunning Test Case")
+    print("start = " + str(start))
+    print("end = " + str(end))
+
+    start_time = time.time()
     ans1= shortest_path_optmized(start,end)
+    end_time = time.time()
+
     current = start
     for move in ans1:
         current = rubik.perm_apply(t[move], current)
@@ -118,12 +126,16 @@ def test(x):
         print(start,end,"Optimised failed")
         exit()
     else:
-        print("Optimised ok")
+        print("Optimised ok | Time Taken:" + str(round(end_time - start_time, 2)))
 
     #bruteforce will take large time otherwise
-    if(len(ans1)>6):
-        return
+    # if(len(ans1)>6):
+    #     return
+
+    start_time = time.time()
     ans2= shortest_path(start,end)
+    end_time = time.time()
+
     current = start
     for move in ans2:
         current = rubik.perm_apply(t[move], current)
@@ -131,7 +143,7 @@ def test(x):
         print(start,end,"Bruteforce failed")
         exit()
     else:
-        print("Bruteforce ok")
+        print("Bruteforce ok | Time Taken: " + str(round(end_time - start_time, 2)))
 
 def test_suite():
     for i in range(int(input("Enter number of testcase "))):
