@@ -147,7 +147,7 @@ def test(x):
 
 def test_suite():
     for i in range(int(input("Enter number of testcase "))):
-        test(random.randrange(7,12))#larger random number means high chances of longer path
+        test(random.randrange(7,15))#larger random number means high chances of longer path
 
 
 test_suite()

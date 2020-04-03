@@ -1,0 +1,94 @@
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (9, 10, 11, 4, 5, 3, 16, 17, 15, 13, 14, 12, 7, 8, 6, 20, 18, 19, 0, 1, 2, 21, 22, 23)
+['Fi', 'Li', 'U', 'L', 'L', 'Ui', 'Li', 'U', 'Fi', 'Fi']
+Optimised ok | Time Taken:0.02
+['Fi', 'Li', 'Fi', 'Li', 'F', 'U', 'F', 'U', 'U', 'F']
+Bruteforce ok | Time Taken: 18.5
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (9, 10, 11, 6, 7, 8, 18, 19, 20, 12, 13, 14, 0, 1, 2, 15, 16, 17, 3, 4, 5, 21, 22, 23)
+['F', 'F', 'L', 'L', 'Fi']
+Optimised ok | Time Taken:0.03
+['F', 'F', 'L', 'L', 'Fi']
+Bruteforce ok | Time Taken: 0.02
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (5, 3, 4, 13, 14, 12, 6, 7, 8, 9, 10, 11, 20, 18, 19, 15, 16, 17, 1, 2, 0, 21, 22, 23)
+['F', 'F', 'L', 'F']
+Optimised ok | Time Taken:0.0
+['F', 'F', 'L', 'F']
+Bruteforce ok | Time Taken: 0.0
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (7, 8, 6, 1, 2, 0, 17, 15, 16, 5, 3, 4, 18, 19, 20, 9, 10, 11, 12, 13, 14, 21, 22, 23)
+['Fi', 'L', 'Ui', 'L', 'Fi', 'Fi', 'Ui', 'L', 'Ui', 'F']
+Optimised ok | Time Taken:0.01
+['Fi', 'L', 'Ui', 'L', 'F', 'F', 'Ui', 'L', 'Ui', 'F']
+Bruteforce ok | Time Taken: 19.87
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (2, 0, 1, 20, 18, 19, 9, 10, 11, 7, 8, 6, 13, 14, 12, 15, 16, 17, 3, 4, 5, 21, 22, 23)
+['Fi', 'L', 'Fi', 'Li', 'Li', 'Fi', 'Fi']
+Optimised ok | Time Taken:0.04
+['Fi', 'L', 'Fi', 'L', 'L', 'F', 'F']
+Bruteforce ok | Time Taken: 0.34
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (12, 13, 14, 2, 0, 1, 20, 18, 19, 9, 10, 11, 7, 8, 6, 5, 3, 4, 17, 15, 16, 21, 22, 23)
+['Fi', 'Li', 'Ui', 'Fi', 'Li', 'F']
+Optimised ok | Time Taken:0.0
+['Fi', 'Li', 'Ui', 'Fi', 'Li', 'F']
+Bruteforce ok | Time Taken: 0.1
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (5, 3, 4, 13, 14, 12, 6, 7, 8, 9, 10, 11, 20, 18, 19, 15, 16, 17, 1, 2, 0, 21, 22, 23)
+['F', 'F', 'L', 'F']
+Optimised ok | Time Taken:0.0
+['F', 'F', 'L', 'F']
+Bruteforce ok | Time Taken: 0.0
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (6, 7, 8, 14, 12, 13, 9, 10, 11, 1, 2, 0, 16, 17, 15, 5, 3, 4, 18, 19, 20, 21, 22, 23)
+['Fi', 'Ui', 'F']
+Optimised ok | Time Taken:0.0
+['Fi', 'Ui', 'F']
+Bruteforce ok | Time Taken: 0.0
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (1, 2, 0, 20, 18, 19, 14, 12, 13, 10, 11, 9, 8, 6, 7, 5, 3, 4, 17, 15, 16, 21, 22, 23)
+['Fi', 'Ui', 'F', 'Li', 'Fi', 'Fi']
+Optimised ok | Time Taken:0.0
+['Fi', 'Ui', 'F', 'Li', 'F', 'F']
+Bruteforce ok | Time Taken: 0.11
+
+Running Test Case
+start = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
+end = (10, 11, 9, 17, 15, 16, 0, 1, 2, 4, 5, 3, 14, 12, 13, 7, 8, 6, 20, 18, 19, 21, 22, 23)
+['L', 'U', 'U', 'Fi', 'Li', 'Li', 'Fi', 'Ui', 'F']
+Optimised ok | Time Taken:0.01
+['L', 'U', 'U', 'Fi', 'L', 'L', 'Fi', 'Ui', 'F']
+Bruteforce ok | Time Taken: 9.48
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+EXPLAINATION
+
+In the rubik's cube each state is connected to six more states.
+Therefore in the bfs at each level our number of vertices grow by a factor of 6
+
+Suppose we have a start and end state, such that the minimum length path between 
+those two state is 14.
+
+Then the unoptimized algorithm would end up visiting ~6^14 vertices,
+while the optimized algorithm only visits ~2*6^7 vertices.
+
+Therefore, the optimized algorithm is faster than the unoptimized one.
