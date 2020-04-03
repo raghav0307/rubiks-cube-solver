@@ -2,6 +2,7 @@ import rubik
 import Queue
 import random
 import time
+
 def shortest_path(start, end):
     """
     For Question 1, using BFS, finds the shortest path from start_position to
@@ -26,7 +27,7 @@ def shortest_path(start, end):
             if x[0] not in visited:
                 visited.add(x[0])
                 L.put(x)
-
+    
     print(mov)
     return mov
 
@@ -109,7 +110,7 @@ def test(x):
     end  = (6, 7, 8, 0, 1, 2, 9, 10, 11, 3, 4, 5, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23)
     
     for i in range(x):
-        end = rubik.perm_apply(end,l[random.randrange(0,len(l))])
+        end = rubik.perm_apply(l[random.randrange(0,len(l))], end)
     
     print("\nRunning Test Case")
     print("start = " + str(start))
